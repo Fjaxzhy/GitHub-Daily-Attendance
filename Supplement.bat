@@ -3,6 +3,23 @@
 echo === GitHub Daily Attendance : Supplement ===
 rem Get:date --> mkdir:date
 
+net session 1>NUL 2>NUL && (
+    goto gotAdmin
+) || (
+    goto UACPrompt
+)
+   
+:UACPrompt  
+    echo Set UAC = CreateObject^("Shell.Application"^) > "%temp%\getadmin.vbs" 
+    echo UAC.ShellExecute "%~s0", "", "", "runas", 1 >> "%temp%\getadmin.vbs" 
+    "%temp%\getadmin.vbs" 
+    exit /B  
+   
+:gotAdmin  
+    if exist "%temp%\getadmin.vbs" ( del "%temp%\getadmin.vbs" )  
+ 
+:begin
+
 cd  %~dp0
 cd .\Supplement\
 
