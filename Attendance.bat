@@ -3,8 +3,7 @@ echo === GitHub Daily Attendance ===
 
 rem Get:date --> mkdir:date
 
-set today = %date%
-md %~dp0\%date%
+md "%date:~2,2%%date:~5,2%%date:~8,2%"
 
 rem Git:push --> Origin:main
 
