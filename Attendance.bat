@@ -8,7 +8,6 @@ cd "%date:~2,2%%date:~5,2%%date:~8,2%"
 echo # GitHub-Daily-Attendance >> README.md
 cd ..
 
-echo === Git:push --> Origin:main ===
 rem Git:push --> Origin:main
 
 git add -A
