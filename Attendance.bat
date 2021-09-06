@@ -3,6 +3,10 @@
 echo === GitHub Daily Attendance ===
 rem Get:date --> mkdir:date
 
+echo ==================
+echo Today:  %date%
+echo ==================
+
 md "%date:~2,2%%date:~5,2%%date:~8,2%"
 cd "%date:~2,2%%date:~5,2%%date:~8,2%"
 echo # GitHub-Daily-Attendance >> README.md
