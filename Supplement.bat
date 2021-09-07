@@ -1,7 +1,8 @@
 @echo off
 
 echo === GitHub Daily Attendance : Supplement ===
-rem Get:date --> mkdir:date
+
+rem check Administrator
 
 net session 1>NUL 2>NUL && (
     goto gotAdmin
@@ -19,6 +20,8 @@ net session 1>NUL 2>NUL && (
     if exist "%temp%\getadmin.vbs" ( del "%temp%\getadmin.vbs" )  
  
 :begin
+
+rem Get:date --> mkdir:date
 
 cd  %~dp0
 cd .\Supplement\
